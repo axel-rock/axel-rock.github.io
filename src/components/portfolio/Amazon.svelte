@@ -12,6 +12,7 @@
 		src="{assets}/portfolio/yeti/index.html"
 		width="300"
 		height="600"
+		loading="lazy"
 		frameborder="0"
 	/>
 
