@@ -27,9 +27,9 @@ jobs:
         run: npm install
 
       - name: build
-        env:
-          # BASE_PATH: '/'
-          # BASE_PATH: '/axel-rock.github.io'
+        # env:
+        # BASE_PATH: '/'
+        # BASE_PATH: '/axel-rock.github.io'
         run: |
           npm run build
           touch build/.nojekyll
