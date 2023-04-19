@@ -9,7 +9,7 @@
 	<iframe
 		bind:this={iframe}
 		title="Yeti"
-		src="/portfolio/yeti/index.html"
+		src="{assets}/portfolio/yeti/index.html"
 		width="300"
 		height="600"
 		frameborder="0"

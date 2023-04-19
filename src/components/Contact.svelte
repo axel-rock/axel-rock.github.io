@@ -6,7 +6,7 @@
 	<h1 class="center">
 		<img
 			aria-labelledby="Contact, it's just text, but a reference to Daft Punk"
-			src="contact.png"
+			src="{assets}/contact.png"
 			alt="Contact"
 		/>
 	</h1>
