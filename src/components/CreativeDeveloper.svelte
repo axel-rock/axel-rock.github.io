@@ -3,7 +3,7 @@
 	import { gsap } from 'gsap';
 	import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
-	let svg: SVGSVGElement;
+	let svg: SVGElement;
 	let paths: NodeListOf<SVGPathElement>;
 	let timeline: gsap.core.Timeline;
 
