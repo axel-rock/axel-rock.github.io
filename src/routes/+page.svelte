@@ -1,4 +1,5 @@
 <script>
+	import { assets } from '$app/paths';
 	import CreativeDeveloper from '../components/CreativeDeveloper.svelte';
 	import Attaboy from '../components/portfolio/Attaboy.svelte';
 	import Contact from '../components/Contact.svelte';
@@ -23,30 +24,29 @@
 
 	<div class="tiles">
 		<div class="tile">
-			<img src="logo_airbnb.svg" alt="Airbnb Logo" />
+			<img src="{assets}/logo_airbnb.svg" alt="Airbnb Logo" />
 		</div>
 
 		<div class="tile">
-			<img src="logo_spotify.png" alt="Spotify Logo" />
+			<img src="{assets}/logo_spotify.png" alt="Spotify Logo" />
 		</div>
 
 		<div class="tile">
-			<img src="logo_google.svg" alt="Google Logo" />
+			<img src="{assets}/logo_google.svg" alt="Google Logo" />
 		</div>
 
 		<div class="tile">
-			<img src="logo_netflix.png" alt="Netflix Logo" />
+			<img src="{assets}/logo_netflix.png" alt="Netflix Logo" />
 		</div>
 
 		<!-- <div class="tile">
-      <img src="logo_converse.svg" alt="Converse Logo">
+      <img src="{assets}/logo_converse.svg" alt="Converse Logo">
     </div>  -->
 	</div>
 </section>
 
 <section style="width: 100%;">
 	<Amazon />
-	<!-- <Netflix/> -->
 </section>
 
 <section>
@@ -57,22 +57,22 @@
 
 	<div class="tiles">
 		<div class="tile">
-			<img src="logo_svelte.svg" alt="Svelte Logo" />
+			<img src="{assets}/logo_svelte.svg" alt="Svelte Logo" />
 			<span>SvelteKit</span>
 		</div>
 
 		<div class="tile">
-			<img src="logo_open-ai.svg" alt="OpenAI Logo" />
+			<img src="{assets}/logo_open-ai.svg" alt="OpenAI Logo" />
 			<span>AI</span>
 		</div>
 
 		<div class="tile">
-			<img src="logo_firebase.svg" alt="OpenAI Logo" />
+			<img src="{assets}/logo_firebase.svg" alt="OpenAI Logo" />
 			<span>Firebase</span>
 		</div>
 
 		<div class="tile">
-			<img src="logo_browser.svg" alt="Browser Logo" />
+			<img src="{assets}/logo_browser.svg" alt="Browser Logo" />
 			<span>Browser APIs</span>
 		</div>
 	</div>

@@ -1,3 +1,7 @@
+<script>
+	import { assets } from '$app/paths';
+</script>
+
 <article class="card">
 	<div class="infos">
 		<h1>
@@ -43,7 +47,7 @@
 		>
 	</div>
 
-	<img src="attaboy.png" alt="Attaboy screenshot" class="drop-shadow" />
+	<img src="{assets}/attaboy.png" alt="Attaboy screenshot" class="drop-shadow" />
 </article>
 
 <style>

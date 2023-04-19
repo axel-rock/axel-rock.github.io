@@ -1,3 +1,7 @@
+<script>
+	import { assets } from '$app/paths';
+</script>
+
 <article class="card">
 	<h1 class="center">
 		<img
@@ -17,7 +21,7 @@
 			rel="noreferrer"
 			class="tile"
 		>
-			<img src="logo_twitter.png" alt="Twitter logo" />
+			<img src="{assets}/logo_twitter.png" alt="Twitter logo" />
 			<span>@nineties_panda</span>
 		</a>
 
@@ -28,7 +32,7 @@
 			rel="noreferrer"
 			class="tile"
 		>
-			<img src="logo_linkedin.png" alt="LinkedIn logo" />
+			<img src="{assets}/logo_linkedin.png" alt="LinkedIn logo" />
 			<span>Axel Rock</span>
 		</a>
 
@@ -39,7 +43,7 @@
 			rel="noreferrer"
 			class="tile"
 		>
-			<img src="logo_github.svg" alt="GitHub logo" />
+			<img src="{assets}/logo_github.svg" alt="GitHub logo" />
 			<span>axel-rock</span>
 		</a>
 
@@ -48,7 +52,7 @@
 			title="Email me"
 			class="tile"
 		>
-			<img src="logo_mail.svg" alt="Mail" style="height: 1.6rem" />
+			<img src="{assets}/logo_mail.svg" alt="Mail" style="height: 1.6rem" />
 			<span>ro&#99;&#107;&#97;xel&#64;&#103;&#109;ail&#46;c&#111;m</span>
 		</a>
 	</div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { assets } from '$app/paths';
 	let iframe: HTMLIFrameElement;
 </script>
 
@@ -15,7 +16,7 @@
 	/>
 
 	<h1 class="center">
-		<img aria-labelledby="Amazon" src="logo_amazon.svg" alt="Amazon" />
+		<img aria-labelledby="Amazon" src="{assets}/logo_amazon.svg" alt="Amazon" />
 	</h1>
 
 	<div>
