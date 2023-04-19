@@ -83,7 +83,9 @@
 </section>
 
 <p class="center">
-	<a href="axel-rock-creative-developer-resume.pdf" download class="button">Download my resume</a>
+	<a href="{assets}/axel-rock-creative-developer-resume.pdf" download class="button"
+		>Download my resume</a
+	>
 </p>
 
 <style>
