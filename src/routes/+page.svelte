@@ -6,6 +6,14 @@
 	import Amazon from '../components/portfolio/Amazon.svelte';
 </script>
 
+<svelte:head>
+	<title>Axel Rock - Creative Developer</title>
+	<meta
+		name="description"
+		content="I'm a creative developer with 10+ years of experience, based in France."
+	/>
+</svelte:head>
+
 <section style="min-height: 50vh; justify-content: center">
 	<h1>Axel Rock</h1>
 	<CreativeDeveloper />
