@@ -11,10 +11,10 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter(),
-		paths: {
-			base: dev ? '' : process.env.BASE_PATH
-		}
+		adapter: adapter()
+		// paths: {
+		// base: dev ? '' : process.env.BASE_PATH
+		// }
 	}
 };
 
