@@ -1,9 +1,9 @@
 <script>
-	import { assets } from '$app/paths';
-	import CreativeDeveloper from '../components/CreativeDeveloper.svelte';
-	import Attaboy from '../components/portfolio/Attaboy.svelte';
-	import Contact from '../components/Contact.svelte';
-	import Amazon from '../components/portfolio/Amazon.svelte';
+	import { assets } from '$app/paths'
+	import CreativeDeveloper from '../components/CreativeDeveloper.svelte'
+	import Attaboy from '../components/portfolio/Attaboy.svelte'
+	import Contact from '../components/Contact.svelte'
+	import Amazon from '../components/portfolio/Amazon.svelte'
 </script>
 
 <svelte:head>
@@ -14,23 +14,23 @@
 	/>
 </svelte:head>
 
-<section style="min-height: 50vh; justify-content: center">
+<section class="container" style="min-height: 70vh; display: flex; flex-direction: column; justify-content: center">
 	<h1>Axel Rock</h1>
 	<CreativeDeveloper />
 </section>
 
-<section>
+<section class="container">
 	<p class="center">For over a decade, I've created apps, websites and banners.</p>
 	<Attaboy />
 </section>
 
-<section>
+<section class="container">
 	<p class="center">
 		At <a href="https://bannerboy.com" target="_blank" rel="noreferrer">Bannerboy</a>, I had the
 		chance to work with the biggest brands.
 	</p>
 
-	<div class="tiles">
+	<div class="tiles center">
 		<div class="tile">
 			<img src="{assets}/logo_airbnb.svg" alt="Airbnb Logo" />
 		</div>
@@ -46,24 +46,24 @@
 		<div class="tile">
 			<img src="{assets}/logo_netflix.png" alt="Netflix Logo" />
 		</div>
-
-		<!-- <div class="tile">
-      <img src="{assets}/logo_converse.svg" alt="Converse Logo">
-    </div>  -->
+		<!-- 
+		<div class="tile">
+			<img src="{assets}/logo_converse.svg" alt="Converse Logo" />
+		</div> -->
 	</div>
 </section>
 
-<section style="width: 100%;">
+<section class="container" style="width: 100%;">
 	<Amazon />
 </section>
 
-<section>
+<section class="container">
 	<p class="center">
 		JavaScript is my main tool. But I use everything the web offers.<br />Here are my current
 		favourite things:
 	</p>
 
-	<div class="tiles">
+	<div class="tiles center">
 		<div class="tile">
 			<img src="{assets}/logo_svelte.svg" alt="Svelte Logo" />
 			<span>SvelteKit</span>
@@ -86,31 +86,102 @@
 	</div>
 </section>
 
-<section class="full-width">
+<section class="container full-width">
 	<Contact />
 </section>
 
-<p class="center">
-	<a href="{assets}/axel-rock-creative-developer-resume.pdf" download class="button"
-		>Download my resume</a
-	>
-</p>
+<p class="center"><a href="{assets}/axel-rock-creative-developer-resume.pdf" download role="button" class="contrast"
+		>Download my resume</a></p>
 
 <style>
+	* {
+		--contrast: var(--text);
+	}
+
 	h1 {
 		font-size: min(6rem, 15vw);
 		line-height: 1;
+		margin: 0;
 		text-align: center;
-		font-family: 'SF Pro Display Bold', sans-serif;
+		font-weight: 400;
 	}
 
 	section {
-		padding: 1rem;
-		max-width: 100ch;
-		align-self: center;
+		margin-bottom: var(--spacing-200);
 	}
 
-	section.full-width {
+	p {
+		margin-bottom: var(--spacing);
+		font-size: 1.1em;
+		font-weight: 400;
+		color: var(--grey-600);
+	}
+
+	/* Utility */
+
+	:global(.center) {
+		text-align: center;
+		place-content: center;
+	}
+
+	:global(.mobile-only) {
+		display: none;
+	}
+
+	:global(.card) {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		padding: calc(var(--spacing) * 4) calc(var(--spacing) * 2);
+		gap: calc(var(--spacing) * 1.5);
+		border-radius: 2rem;
+	}
+
+	:global(.tiles) {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+		/* flex-wrap: wrap; */
+		justify-content: center;
+		font-size: 2rem;
+		gap: 0.75em;
+	}
+
+	/* @media (max-width: 600px) {
+		:global(.tiles) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	} */
+
+	:global(.tile) {
+		display: grid;
+		grid-template-rows: 1em;
+		gap: 0.33em;
+		padding: 0.5em;
+		font-weight: 400;
+		line-height: 1;
+		justify-content: center;
+		text-align: center;
+		border: solid 1px #ccc8;
+		border-radius: 0.5em;
+		color: var(--grey-600);
+	}
+
+	:global(.tile img) {
 		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	:global(.tile span) {
+		font-size: 0.5em;
+	}
+
+	:global(.drop-shadow) {
+		filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+	}
+
+	.tiles {
+		padding: 0 var(--spacing-200);
 	}
 </style>

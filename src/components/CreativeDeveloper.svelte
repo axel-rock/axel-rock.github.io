@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
-	import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+	import { gsap } from 'gsap/dist/gsap.js'
+	import { DrawSVGPlugin } from 'gsap/dist/DrawSVGPlugin.js'
 
 	let svg: SVGElement;
 	let paths: NodeListOf<SVGPathElement>;
@@ -64,6 +64,7 @@
 
 <style>
 	svg {
-		max-width: 70ch;
+		max-width: 43ch;
+		margin: var(--spacing) auto;
 	}
 </style>

@@ -7,5 +7,5 @@
 <footer />
 
 <style global>
-	@import '../css/app.css';
+	@import '../css/style.css';
 </style>

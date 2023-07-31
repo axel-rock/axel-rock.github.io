@@ -1,0 +1,30 @@
+[debug] [2023-07-31T23:36:39.299Z] ----------------------------------------------------------------------
+[debug] [2023-07-31T23:36:39.300Z] Command:       /Users/axel/.nvm/versions/node/v18.17.0/bin/node /Users/axel/.nvm/versions/node/v18.17.0/bin/firebase deploy
+[debug] [2023-07-31T23:36:39.300Z] CLI Version:   12.4.5
+[debug] [2023-07-31T23:36:39.300Z] Platform:      darwin
+[debug] [2023-07-31T23:36:39.300Z] Node Version:  v18.17.0
+[debug] [2023-07-31T23:36:39.301Z] Time:          Tue Aug 01 2023 01:36:39 GMT+0200 (Central European Summer Time)
+[debug] [2023-07-31T23:36:39.301Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-31T23:36:39.335Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-31T23:36:39.336Z] > authorizing via signed-in user (rockaxel@gmail.com)
+[debug] [2023-07-31T23:36:39.336Z] [iam] checking project axel-rock for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-31T23:36:39.337Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/axel-rock:testIamPermissions [none]
+[debug] [2023-07-31T23:36:39.337Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/axel-rock:testIamPermissions x-goog-quota-user=projects/axel-rock
+[debug] [2023-07-31T23:36:39.337Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/axel-rock:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-31T23:36:40.290Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/axel-rock:testIamPermissions 200
+[debug] [2023-07-31T23:36:40.291Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/axel-rock:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-31T23:36:40.292Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/axel-rock [none]
+[debug] [2023-07-31T23:36:40.585Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/axel-rock 200
+[debug] [2023-07-31T23:36:40.585Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/axel-rock {"projectId":"axel-rock","projectNumber":"223150805634","displayName":"axel-rock","name":"projects/axel-rock","resources":{"hostingSite":"axel-rock"},"state":"ACTIVE","etag":"1_387b84ed-acfa-47e6-9250-ec21e8f91a1f"}
+[info] 
+   Thank you for trying our experimental support for SvelteKit on Firebase Hosting.
+   While this integration is maintained by Googlers it is not a supported Firebase product.
+   Issues filed on GitHub will be addressed on a best-effort basis by maintainers and other community members.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/frameworks-overview
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+

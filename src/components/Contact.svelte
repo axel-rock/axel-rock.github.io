@@ -61,7 +61,8 @@
 <style>
 	article {
 		background: #000;
-		padding: calc(var(--space) * 4) calc(var(--space) * 2) calc(var(--space) * 2);
+		padding: var(--spacing-400) var(--spacing-200) var(--spacing-200);
+		justify-content: stretch;
 	}
 
 	a {
@@ -71,6 +72,7 @@
 	h1 {
 		display: flex;
 		justify-content: center;
+		margin: 0 auto;
 	}
 
 	p {

@@ -20,7 +20,7 @@
 		<img aria-labelledby="Amazon" src="{assets}/logo_amazon.svg" alt="Amazon" />
 	</h1>
 
-	<div>
+	<div style="z-index: 1">
 		<p>Multiple campaigns for Amazon: Prime Day, Black Friday, Holiday season…</p>
 		<p>
 			I've been in charge of master animation, and automation to ship animated and static banners
@@ -31,7 +31,7 @@
 
 <style>
 	article {
-		border-radius: 1rem;
+		border-radius: var(--border-radius);
 		gap: 0;
 		padding: 1rem 3rem 1rem 300px;
 		min-height: 300px;
@@ -39,6 +39,12 @@
 		display: grid;
 		place-content: center;
 		gap: 2rem;
+	}
+
+	h1 {
+		text-align: left;
+		padding: 0;
+		margin: 0;
 	}
 
 	@media (max-width: 600px) {
@@ -52,7 +58,7 @@
 	}
 
 	p {
-		font-weight: 700 !important;
+		font-weight: 400 !important;
 		text-shadow: 0 0 10px #fff4;
 	}
 
@@ -61,7 +67,7 @@
 		background-size: cover;
 		position: absolute;
 		overflow: hidden;
-		border-radius: 2rem;
+		border-radius: var(--border-radius);
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -85,7 +91,7 @@
 		bottom: 0;
 		transform-origin: top left;
 		pointer-events: none;
-		border-bottom-left-radius: 2rem;
+		border-bottom-left-radius: var(--border-radius);
 		overflow: hidden;
 	}
 </style>
