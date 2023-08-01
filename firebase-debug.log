@@ -28,3 +28,150 @@
 
    We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
 
+[debug] [2023-07-31T23:37:05.059Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "europe-west1"
+      },
+      "site": "axel-rock",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssraxelrock",
+            "region": "europe-west1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [],
+      "cleanUrls": true,
+      "public": ".firebase/axel-rock/hosting",
+      "webFramework": "svelekit_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase/axel-rock/functions",
+      "codebase": "firebase-frameworks-axel-rock"
+    }
+  ]
+}
+[debug] [2023-07-31T23:37:05.059Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-31T23:37:05.059Z] > authorizing via signed-in user (rockaxel@gmail.com)
+[debug] [2023-07-31T23:37:05.060Z] [iam] checking project axel-rock for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-07-31T23:37:05.060Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/axel-rock:testIamPermissions [none]
+[debug] [2023-07-31T23:37:05.060Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/axel-rock:testIamPermissions x-goog-quota-user=projects/axel-rock
+[debug] [2023-07-31T23:37:05.060Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/axel-rock:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-07-31T23:37:05.780Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/axel-rock:testIamPermissions 200
+[debug] [2023-07-31T23:37:05.780Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/axel-rock:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'axel-rock'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-07-31T23:37:05.782Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/axel-rock [none]
+[debug] [2023-07-31T23:37:05.995Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/axel-rock 200
+[debug] [2023-07-31T23:37:05.995Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/axel-rock {"projectId":"axel-rock","projectNumber":"223150805634","displayName":"axel-rock","name":"projects/axel-rock","resources":{"hostingSite":"axel-rock"},"state":"ACTIVE","etag":"1_387b84ed-acfa-47e6-9250-ec21e8f91a1f"}
+[info] i  functions: preparing codebase firebase-frameworks-axel-rock for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-07-31T23:37:05.996Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-07-31T23:37:05.996Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/axel-rock
+[debug] [2023-07-31T23:37:05.998Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-07-31T23:37:05.998Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/axel-rock
+[debug] [2023-07-31T23:37:05.999Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/cloudbuild.googleapis.com [none]
+[debug] [2023-07-31T23:37:05.999Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/cloudbuild.googleapis.com x-goog-quota-user=projects/axel-rock
+[debug] [2023-07-31T23:37:06.000Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/artifactregistry.googleapis.com [none]
+[debug] [2023-07-31T23:37:06.000Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/artifactregistry.googleapis.com x-goog-quota-user=projects/axel-rock
+[debug] [2023-07-31T23:37:06.845Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/runtimeconfig.googleapis.com 200
+[debug] [2023-07-31T23:37:06.845Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-07-31T23:37:06.846Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/cloudbuild.googleapis.com 200
+[debug] [2023-07-31T23:37:06.846Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-07-31T23:37:06.848Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/cloudfunctions.googleapis.com 200
+[debug] [2023-07-31T23:37:06.848Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-07-31T23:37:06.849Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/artifactregistry.googleapis.com 200
+[debug] [2023-07-31T23:37:06.849Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-07-31T23:37:06.850Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/axel-rock/adminSdkConfig [none]
+[debug] [2023-07-31T23:37:07.060Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/axel-rock/adminSdkConfig 200
+[debug] [2023-07-31T23:37:07.060Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/axel-rock/adminSdkConfig {"projectId":"axel-rock","storageBucket":"axel-rock.appspot.com"}
+[debug] [2023-07-31T23:37:07.062Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/axel-rock/configs [none]
+[debug] [2023-07-31T23:37:07.328Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/axel-rock/configs 200
+[debug] [2023-07-31T23:37:07.328Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/axel-rock/configs {}
+[debug] [2023-07-31T23:37:07.331Z] Validating nodejs source
+[debug] [2023-07-31T23:37:07.656Z] > [functions] package.json contents: {
+  "name": "rock",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "gsap": "file:gsap-bonus.tgz",
+    "@sveltejs/kit": "^1.22.4",
+    "firebase-frameworks": "^0.10.4",
+    "firebase-functions": "^4.3.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2023-07-31T23:37:07.656Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-axel-rock to determine what to deploy 
+[debug] [2023-07-31T23:37:07.657Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-07-31T23:37:07.663Z] Found firebase-functions binary at '/Users/axel/Developer/axel-rock.github.io/.firebase/axel-rock/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8397
+
+[debug] [2023-07-31T23:37:07.801Z] Got response from /__/functions.yaml {"endpoints":{"ssraxelrock":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["europe-west1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssraxelrock"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase/axel-rock/functions directory for uploading... 
+[info] i  functions: packaged /Users/axel/Developer/axel-rock.github.io/.firebase/axel-rock/functions (1.67 MB) for uploading 
+[debug] [2023-07-31T23:37:07.890Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/axel-rock/locations/-/functions [none]
+[debug] [2023-07-31T23:37:08.386Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/axel-rock/locations/-/functions 200
+[debug] [2023-07-31T23:37:08.387Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/axel-rock/locations/-/functions {}
+[debug] [2023-07-31T23:37:08.388Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/axel-rock/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-07-31T23:37:09.366Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/axel-rock/locations/-/functions 200
+[debug] [2023-07-31T23:37:09.366Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/axel-rock/locations/-/functions {"functions":[{"name":"projects/axel-rock/locations/europe-west1/functions/ssraxelrock","buildConfig":{"build":"projects/223150805634/locations/europe-west1/builds/7f3a01ae-34b6-4b74-a871-2de5ca0ae0d9","runtime":"nodejs18","entryPoint":"ssraxelrock","source":{"storageSource":{"bucket":"gcf-v2-sources-223150805634-europe-west1","object":"ssraxelrock/function-source.zip","generation":"1690845860932650"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-223150805634-europe-west1","object":"ssraxelrock/function-source.zip","generation":"1690845860932650"}}},"serviceConfig":{"service":"projects/axel-rock/locations/europe-west1/services/ssraxelrock","timeoutSeconds":60,"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"sveltekit","FIREBASE_CONFIG":"{\"projectId\":\"axel-rock\",\"storageBucket\":\"axel-rock.appspot.com\"}","GCLOUD_PROJECT":"axel-rock","EVENTARC_CLOUD_EVENT_SOURCE":"projects/axel-rock/locations/europe-west1/services/ssraxelrock"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://ssraxelrock-6cay2aaxca-ew.a.run.app","serviceAccountEmail":"223150805634-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssraxelrock-00001-bat","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2023-07-31T23:25:35.817701121Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-axel-rock","firebase-functions-hash":"1491bc6fd5acf210421aaa4a00893cac5ea06c66"},"environment":"GEN_2","url":"https://europe-west1-axel-rock.cloudfunctions.net/ssraxelrock"}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-07-31T23:37:09.372Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/run.googleapis.com [none]
+[debug] [2023-07-31T23:37:09.372Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/run.googleapis.com x-goog-quota-user=projects/axel-rock
+[debug] [2023-07-31T23:37:09.375Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/eventarc.googleapis.com [none]
+[debug] [2023-07-31T23:37:09.375Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/eventarc.googleapis.com x-goog-quota-user=projects/axel-rock
+[debug] [2023-07-31T23:37:09.377Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/pubsub.googleapis.com [none]
+[debug] [2023-07-31T23:37:09.377Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/pubsub.googleapis.com x-goog-quota-user=projects/axel-rock
+[debug] [2023-07-31T23:37:09.378Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/storage.googleapis.com [none]
+[debug] [2023-07-31T23:37:09.378Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/storage.googleapis.com x-goog-quota-user=projects/axel-rock
+[debug] [2023-07-31T23:37:10.288Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/pubsub.googleapis.com 200
+[debug] [2023-07-31T23:37:10.289Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-07-31T23:37:10.290Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/eventarc.googleapis.com 200
+[debug] [2023-07-31T23:37:10.290Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2023-07-31T23:37:10.291Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/storage.googleapis.com 200
+[debug] [2023-07-31T23:37:10.291Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-07-31T23:37:10.292Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/run.googleapis.com 200
+[debug] [2023-07-31T23:37:10.292Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/axel-rock/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-07-31T23:37:10.293Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/223150805634/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-07-31T23:37:10.295Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/223150805634/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-07-31T23:37:11.409Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/223150805634/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-07-31T23:37:11.409Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/223150805634/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-223150805634@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"104788206556906626772"}}
