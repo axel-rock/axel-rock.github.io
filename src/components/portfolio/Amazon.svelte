@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { assets } from '$app/paths';
-	let iframe: HTMLIFrameElement;
+	import { assets } from '$app/paths'
+	let iframe: HTMLIFrameElement
 </script>
 
 <article class="card">
@@ -9,7 +9,7 @@
 	<iframe
 		bind:this={iframe}
 		title="Yeti"
-		src="{assets}/portfolio/yeti/index.html"
+		src="https://attaboy-dev.appspot.com.storage.googleapis.com/uploads/-NaiO6k7v7vk0d7otQHT/files/GD2ikoS6PNRYvZGlVU9YKYN2yfA5QS/yeti/index.html"
 		width="300"
 		height="600"
 		loading="lazy"
