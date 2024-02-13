@@ -4,6 +4,7 @@
 	import Attaboy from '../components/portfolio/Attaboy.svelte'
 	import Contact from '../components/Contact.svelte'
 	import Amazon from '../components/portfolio/Amazon.svelte'
+	import Thinkeo from '../components/portfolio/Thinkeo.svelte'
 </script>
 
 <svelte:head>
@@ -14,9 +15,40 @@
 	/>
 </svelte:head>
 
-<section class="container" style="min-height: 70vh; display: flex; flex-direction: column; justify-content: center">
+<section
+	class="container"
+	style="min-height: 70vh; display: flex; flex-direction: column; justify-content: center"
+>
 	<h1>Axel Rock</h1>
 	<CreativeDeveloper />
+</section>
+
+<section class="container">
+	<p class="center">Front-end developer at Thinkeo.</p>
+	<Thinkeo />
+</section>
+
+<section class="container">
+	<p class="center">Technical advisor for other projects:</p>
+
+	<div class="tiles center">
+		<a
+			href="https://gwalarn.rock.bzh/"
+			class="tile"
+			target="_blank"
+			style="color: #000 !important; text-decoration: none !important; line-height: 1.1;"
+		>
+			Gwalarn
+		</a>
+
+		<a href="https://www.icono-search.com/" class="tile" target="_blank">
+			<img src="{assets}/logo_icono.svg" alt="Icono Logo" style="height: 80%; margin-top: 3%;" />
+		</a>
+
+		<a href="https://www.lesfantomes.fr/" class="tile" target="_blank">
+			<img src="{assets}/logo_les-fantomes.svg" alt="Les Fantômes Logo" />
+		</a>
+	</div>
 </section>
 
 <section class="container">
@@ -90,8 +122,11 @@
 	<Contact />
 </section>
 
-<p class="center"><a href="{assets}/axel-rock-creative-developer-resume.pdf" download role="button" class="contrast"
-		>Download my resume</a></p>
+<p class="center">
+	<a href="{assets}/axel-rock-creative-developer-resume.pdf" download role="button" class="contrast"
+		>Download my resume</a
+	>
+</p>
 
 <style>
 	* {
