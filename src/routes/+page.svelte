@@ -42,7 +42,7 @@
 		</a>
 
 		<a href="https://www.icono-search.com/" class="tile" target="_blank">
-			<img src="{assets}/logo_icono.svg" alt="Icono Logo" style="height: 80%; margin-top: 3%;" />
+			<img src="{assets}/logo_icono.svg" alt="Icono Logo" style="height: 80%;" />
 		</a>
 
 		<a href="https://www.lesfantomes.fr/" class="tile" target="_blank">
