@@ -1,5 +1,5 @@
 <script>
-	import { assets } from '$app/paths';
+	import { assets } from '$app/paths'
 </script>
 
 <article class="card">
@@ -15,14 +15,14 @@
 
 	<div class="tiles">
 		<a
-			href="http://twitter.com/nineties_panda"
+			href="http://twitter.com/axlrck"
 			target="_blank"
 			title="Follow me on Twitter"
 			rel="noreferrer"
 			class="tile"
 		>
 			<img src="{assets}/logo_twitter.png" alt="Twitter logo" />
-			<span>@nineties_panda</span>
+			<span>@axlrck</span>
 		</a>
 
 		<a
